@@ -1,0 +1,4 @@
+.boxed().toList()       .boxed().toList()   .boxed().toList()
+.iterate().limit().boxed().toList()     .iterate().limit().boxed().toList()     .iterate().limit().boxed().toList()
+
+.iterate().limit().boxed().toList()     .iterate().limit().boxed().toList()
