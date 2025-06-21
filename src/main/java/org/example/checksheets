@@ -1,0 +1,49 @@
+LeetCode Problem Description:
+You are given two positive integers low and high.
+
+An integer x consisting of 2 * n digits is symmetric if the sum of the first n digits of x is equal to the sum of the last n digits of x.
+Numbers with an odd number of digits are never symmetric.
+Return the number of symmetric integers in the range [low, high].
+
+Guidance:
+---
+PLAN:
+1. Calculate number of digits for low and high.		use intStream.range output to an array
+
+
+
+2. Identify all even-digit numbers in range.		use stream.filter to remove odd numbers
+3. Loop through each even-digit number.
+4. Split number into two halves.			split whole number into LinkedList using recursion
+5. Sum digits of the first half.
+6. Sum digits of the second half.
+7. Compare sums of both halves.
+8. Count if sums are identical.				compare and test
+9. Return the total count of symmetric numbers.		if true add 1 to out number
+10. Optimize for all even-digit numbers.
+
+---
+SEARCH:
+1. Java split integer into digits		https://www.baeldung.com/java-integer-individual-digits
+2. Find even-digit numbers Java			https://www.w3schools.com/java/java_howto_even_or_odd.asp
+3. Calculate digit sum Java			https://www.geeksforgeeks.org/program-for-sum-of-the-digits-of-a-given-number/
+4. Loop through number range Java		https://www.baeldung.com/java-listing-numbers-within-a-range
+5. Check number of digits in integer Java	https://www.baeldung.com/java-number-of-digits-in-int
+6. Optimize integer comparison Java		https://stackoverflow.com/questions/1514910/how-can-i-properly-compare-two-integers-in-java
+7. Java integer digit manipulation		https://stackoverflow.com/questions/7961271/integer-manipulation-in-java
+8. Efficient range traversal Java
+9. Java half-string sum comparison
+10. Symmetric integer check Java
+
+---
+TESTS:
+1. Base case: range from 0 to 100.
+2. Single even-digit range: low=10, high=11.
+3. Single number range: low=22, high=22.
+4. Large range through 4 digits.
+5. Range includes 3-digit, not symmetric.
+6. 5-digit numbers, expected 0 symmetric.
+7. Overlapping 4-digit range, varying symmetry.
+8. All numbers odd-digit: low=101, high=199.
+9. Mixed-digit length range.
+10. Random large range: low=1234, high=5678.
