@@ -1,0 +1,21 @@
+    public void duplicateZeros(int[] arr) {
+        int dups = 0;
+        int nLen = arr.length-1;
+        for(int i=0;i<nLen;i++){
+            if((arr[i] == 0) && (i < nLen-1)){
+                dups++;
+            }
+        }
+        for(int i=0;i<nLen-dups;i++){
+            if((arr[i] == 0) && (i < nLen-1)){
+                int count
+                while()
+            }
+        }
+
+
+    }
+
+SOLUTION FEEDBACK:
+- Confirm correctness with tests
+- Watch for off-by-one errors

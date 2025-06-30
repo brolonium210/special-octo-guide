@@ -9,8 +9,38 @@ public class countSym {
     public countSym(int low, int high){
 //1. Calculate number of digits for low and high.		use intStream.range output to an array
         List<Integer> myList = new ArrayList<>();
-        myList = IntStream.range(low,high).filter(p->p%2==0).boxed().toList();
+        int total = 0;
+//        myList = IntStream.range(low,high).filter(p->p%2==0).boxed().toList();
+        myList = IntStream.range(low,high).boxed().toList();
+        for(int num:myList){
+        List<Integer> tempList = new ArrayList<>();
+            while(num>0){
+                tempList.add(num%10);
+                num/=10;
+            }
+        List<Integer> top = new ArrayList<>();
+        List<Integer> bot = new ArrayList<>();
+        bot = tempList.subList(0,tempList.size()/2);
+        top = tempList.subList(tempList.size()/2,tempList.size());
+        int topSum = 0;
+        int botSum = 0;
+
+        for(int n:top){
+            topSum += n;
+        }
+        for(int n:bot){
+            botSum += n;
+        }
+        if(topSum == botSum){
+              total++;
+        }
+
+        }
+//        System.out.println(tempList);
+
+
         System.out.println(myList);
+        System.out.println(total);
     }
 
 //
